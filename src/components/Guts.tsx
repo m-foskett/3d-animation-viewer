@@ -39,7 +39,7 @@ type GLTFResult = GLTF & {
 
 const Guts = (props: JSX.IntrinsicElements['group']) => {
   // Create a reference to the Group Element containing the model
-  const group = useRef<THREE.Group>()
+  const group = useRef() as React.MutableRefObject<THREE.Group>
   // Acquire the model nodes, materials and animations
   const { nodes, materials, animations } = useGLTF('./models/guts.gltf') as GLTFResult
   // Get the animations as callable actions and animation names

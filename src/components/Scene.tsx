@@ -1,7 +1,7 @@
 import { MeshReflectorMaterial, OrbitControls } from "@react-three/drei";
 import Guts from "./Guts";
 import { useLoader } from "@react-three/fiber";
-import { LinearEncoding, RepeatWrapping, TextureLoader } from "three";
+import { LinearEncoding, RepeatWrapping, TextureLoader, Vector2 } from "three";
 import { useEffect } from "react";
 
 const Scene = () => {
@@ -20,6 +20,7 @@ const Scene = () => {
 
     normal.encoding = LinearEncoding;
   }, [normal, roughness]);
+  const normalScale = new Vector2(0.15, 0.15);
 
   return (
     // Root Scene
@@ -39,7 +40,7 @@ const Scene = () => {
             <planeGeometry args={[1000, 1000]} />
             <MeshReflectorMaterial
               normalMap={normal}
-              normalScale={[0.15, 0.15]}
+              normalScale={normalScale}
               roughnessMap={roughness}
               envMapIntensity={0}
               dithering={true}
