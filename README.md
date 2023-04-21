@@ -13,7 +13,7 @@ This is a 3D Animation Viewer made using Vite, Three.js, Mantine UI and written 
 
 ## :computer: Screenshots
 The textured model is freely available on Sketchfab and was animated using Mixamo and Blender.
-![preview](https://github.com/m-foskett/3d-animation-viewer/blob/master/preview.gif)
+![preview](https://github.com/m-foskett/3d-animation-viewer/blob/main/preview.gif)
 
 ## :books: Tech-Stack
 Below is a non-exhaustive list of the technologies utilised within this project.
