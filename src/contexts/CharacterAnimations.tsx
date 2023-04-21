@@ -1,11 +1,14 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useState, ReactNode } from "react"
 import { CharacterAnimationsContextType } from "../../types";
 import PropTypes from 'prop-types';
-// import { AnimationClip } from "three";
 
 const CharacterAnimationsContext = createContext<CharacterAnimationsContextType | null>(null);
 
-export const CharacterAnimationsProvider = ({ children }) => {
+interface ProviderProps {
+    children?: ReactNode
+}
+
+export const CharacterAnimationsProvider = ({ children}: ProviderProps) => {
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // State Variables
     const [animationIndex, setAnimationIndex] = useState<number>(0);
@@ -29,6 +32,7 @@ CharacterAnimationsProvider.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useCharacterAnimations = () => {
     return useContext(CharacterAnimationsContext);
 }

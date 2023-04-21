@@ -6,6 +6,7 @@ import { CharacterAnimationsProvider } from './contexts/CharacterAnimations.tsx'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
+    {/* UI Global Styling Provider */}
     <MantineProvider
       withGlobalStyles
       withNormalizeCSS
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         }),
       }}
     >
+      {/* Context Provider */}
       <CharacterAnimationsProvider>
         <App />
       </CharacterAnimationsProvider>

@@ -1,14 +1,16 @@
 import { Canvas } from "@react-three/fiber"
-import Experience from "./components/Experience"
+import Scene from "./components/Scene"
 import Interface from "./components/Interface"
 
 function App() {
-
   return (
     <>
+      {/* Base Canvas */}
       <Canvas shadows camera={{ position: [-125, 250, 350], fov: 50 }}>
-        <Experience />
+        {/* Model Display Scene */}
+        <Scene />
       </Canvas>
+      {/* Animation Select Interface */}
       <Interface />
     </>
   )
